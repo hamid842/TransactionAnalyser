@@ -1,9 +1,7 @@
 package com.example.fileService
 
-import com.sun.xml.bind.v2.schemagen.xmlschema.List
-import org.openxmlformats.schemas.drawingml.x2006.chart.CTChartLines
+import com.example.entities.Transaction
 import java.io.File
-import com.example.entities.Transaction as Trans
 import kotlin.collections.List as List1
 
 //fun main(args: Array<String>) {
@@ -14,10 +12,22 @@ import kotlin.collections.List as List1
 //    lineList.forEach{println("->  " + it)}
 //}
 
-fun readFile(fileName:String) {
+fun fileReading(fileName: String) {
     val fileName = "D:/transaction.csv"
     val lines: List1<String> = File(fileName).readLines().drop(1)
-    lines.forEach { line -> println(line) }
+    lines.forEach { line ->
+        var sp = line.split(",")
+        sp.forEach { print("$it -- ") }
+        println()
+
+        val trans = Transaction()
+        trans.transactionId = sp[0]
+        //trans.dateAndTime = sp[1]
+        trans.amount = sp[2].toDouble()
+        trans.merchantName = sp[3]
+        trans.transactionType = enumValueOf(sp[4])
+        trans.relatedTransaction = sp[5]
+    }
 }
 
 

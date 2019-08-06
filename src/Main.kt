@@ -1,5 +1,7 @@
-import com.example.fileService.readFile
+import com.example.fileService.fileReading
+import com.example.fileService.fileReading
 
 fun main(args: Array<String>) {
-    readFile("D:/transaction.csv")
+    fileReading("D:/transaction.csv")
+
 }
