@@ -12,8 +12,7 @@ data class Transaction(
     var relatedTransaction: String,
     var amount: Double
 ) {
-
-    fun transactionCounter(merchantName: String, fromDate: LocalDateTime, toDate: LocalDateTime): Int? {
+    fun counter(merchantName: String, fromDate: LocalDateTime, toDate: LocalDateTime): Int? {
         return null
     }
 
