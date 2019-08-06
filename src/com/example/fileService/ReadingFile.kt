@@ -2,6 +2,8 @@ package com.example.fileService
 
 import com.example.entities.Transaction
 import java.io.File
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import kotlin.collections.List as List1
 
 //fun main(args: Array<String>) {
@@ -16,18 +18,18 @@ fun fileReading(fileName: String) {
     val fileName = "D:/transaction.csv"
     val lines: List1<String> = File(fileName).readLines().drop(1)
     lines.forEach { line ->
-        var sp = line.split(",")
-        sp.forEach { print("$it -- ") }
-        println()
-
-        val trans = Transaction()
-        trans.transactionId = sp[0]
-        //trans.dateAndTime = sp[1]
-        trans.amount = sp[2].toDouble()
-        trans.merchantName = sp[3]
-        trans.transactionType = enumValueOf(sp[4])
-        trans.relatedTransaction = sp[5]
+        val sp = line.split(",")
+        val trans = Transaction(
+            transactionId = sp[0],
+            dateAndTime = LocalDateTime.parse(sp[1], DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
+            amount = sp[2].toDouble(),
+            merchantName = sp[3],
+            transactionType = enumValueOf(sp[4]),
+            relatedTransaction = sp[5]
+        )
     }
 }
+
+
 
 
