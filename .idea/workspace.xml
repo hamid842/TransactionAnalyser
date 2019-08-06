@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a557ee32-5878-4904-85de-94bced1b2319" name="Default Changelist" comment="">
+    <list default="true" id="a557ee32-5878-4904-85de-94bced1b2319" name="Default Changelist" comment="initialize members">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/example/entities/Transaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/entities/Transaction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/example/fileService/ReadingFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/fileService/ReadingFile.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +24,7 @@
   <component name="ProjectId" id="1OxpJSnBJSlSaYcsgfRpIeB60HX" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="D:/Amir/pillpal_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kotlin_tut" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -115,7 +113,28 @@
       <option name="project" value="LOCAL" />
       <updated>1565074119435</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="initialize members">
+      <created>1565080873282</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565080873282</updated>
+    </task>
+    <task id="LOCAL-00005" summary="data class and read file">
+      <created>1565088386537</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565088386537</updated>
+    </task>
+    <task id="LOCAL-00006" summary="average and count for name">
+      <created>1565096063389</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565096063389</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +154,9 @@
     <MESSAGE value="some changes" />
     <MESSAGE value="file is read ." />
     <MESSAGE value="2 branches are added ." />
-    <option name="LAST_COMMIT_MESSAGE" value="2 branches are added ." />
+    <MESSAGE value="initialize members" />
+    <MESSAGE value="data class and read file" />
+    <MESSAGE value="average and count for name" />
+    <option name="LAST_COMMIT_MESSAGE" value="average and count for name" />
   </component>
 </project>
