@@ -14,11 +14,14 @@ import kotlin.collections.List as List1
 //    lineList.forEach{println("->  " + it)}
 //}
 
-fun fileReading(fileName: String) {
+fun fileReading(fileName: String): MutableList<Transaction> {
     val fileName = "D:/transaction.csv"
     val lines: List1<String> = File(fileName).readLines().drop(1)
+    var tr: MutableList<Transaction> = mutableListOf()
+    tr.forEach { it -> println(it) }
     lines.forEach { line ->
         val sp = line.split(",")
+
         val trans = Transaction(
             transactionId = sp[0],
             dateAndTime = LocalDateTime.parse(sp[1], DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")),
@@ -27,7 +30,9 @@ fun fileReading(fileName: String) {
             transactionType = enumValueOf(sp[4]),
             relatedTransaction = sp[5]
         )
+        tr.add(trans)
     }
+    return tr
 }
 
 
