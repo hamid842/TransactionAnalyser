@@ -1,11 +1,11 @@
 import com.example.fileService.fileReading
-import java.time.LocalDate
+import com.example.fileService.readFileExcel
 import java.time.LocalDateTime
-import java.time.Period
 import java.time.format.DateTimeFormatter
 
 fun main(args: Array<String>) {
     val fileContent = fileReading("D:/transaction.csv")
+    //val fileContent = readFileExcel("D:/Nahid/transactionAnalyser/transaction_master.xlsx")
     val filteredContent = fileContent.filter { it -> it.merchantName == "Kwik-E-Mart" }
     val counter = filteredContent.count()
     val avg = filteredContent.map { it -> it.amount }
